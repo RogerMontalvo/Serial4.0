@@ -41,7 +41,42 @@ Nivell = 5 ;
 Nivell = 6 ;
   }  
 
-  switch ( A )
+  Serial.begin(9600);     // Set up Serial library at 9600 bps
+
+  switch ( Nivell )
+{  
+  case 1:
+  Serial.print ("A") ;
+  break;
+
+  case 2:
+  Serial.print ("B") ;
+  break;
+  
+  case 3:
+  Serial.print ("C") ;
+  break;
+  
+  case 4:
+  Serial.print ("D") ;
+  break;
+  
+  case 5:
+  Serial.print ("E") ;
+  break;
+  
+  case 6:
+  Serial.print ("F") ;
+  break;
+  
+  case7:
+  Serial.print ("G") ;
+  break;
+}
+ 
+
+      
+  
  
 
   
@@ -57,7 +92,7 @@ Nivell = 6 ;
 
 
 
-     Serial.begin(9600);     // set up Serial library at 9600 bps
+     
 
      
 
