@@ -10,7 +10,7 @@
 
 //*************************** VARIABLES *********************************
 
-int tempAigua = 101;
+int tempAigua = 89;
 
 //**************************** SETUP ************************************
 
@@ -24,11 +24,16 @@ void setup() {                            // CONDICIONS INICIALS
 {
     Serial.print("Aigua supera els 100C, esta bullint!");
 }
-  else if ( tempAigua < 100 )
+  else if (( tempAigua < 100 ) and ( tempAigua > 90 ))
 {
-  Serial.print("Aigua encara no bull");
+  Serial.print("Aigua apunt de bullir");
 }
-} 
+  else
+{
+  Serial.print("Isaac l'aigua encara no bull");
+  
+}
+}
 
 
 
