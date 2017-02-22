@@ -40,6 +40,8 @@ Nivell = 5 ;
   else if ( 43.2 <= KgCO2_m2){
 Nivell = 6 ;
   }  
+
+  switch ( A )
  
 
   
