@@ -16,29 +16,30 @@ int Nivell ;
 //**************************** SETUP ************************************
 
 
-void setup() {                            // CONDICIONS INICIALS
+void setup() 
+{                    // CONDICIONS INICIALS
 
 
-  if ( 2 < KgCO2_m2  <3.5 ){
-Nivell = 0 ;
+  if ( 0 < KgCO2_m2  <3.5 ){
+Nivell == 0 ;
   }
   else if ( 3.5 <= KgCO2_m2  < 6.5){
-Nivell = 1 ;
+Nivell == 1 ;
 }
   else if ( 6.5 <= KgCO2_m2  < 11.1){
-Nivell = 2 ;
+Nivell == 2 ;
 }
   else if ( 11.1 <= KgCO2_m2  < 17.7){
-Nivell = 3 ;
+Nivell == 3 ;
   }
   else if ( 17.7 <= KgCO2_m2  < 38.2){
-Nivell = 4 ;
+Nivell == 4 ;
   }
   else if ( 38.2 <= KgCO2_m2  < 43.2){
-Nivell = 5 ;
+Nivell == 5 ;
   }
   else if ( 43.2 <= KgCO2_m2){
-Nivell = 6 ;
+Nivell == 6 ;
   }  
 
   Serial.begin(9600);     // Set up Serial library at 9600 bps
@@ -46,7 +47,9 @@ Nivell = 6 ;
   switch ( Nivell )
 {  
   case 1:
+  {
   Serial.print ("A") ;
+  }
   break;
 
   case 2:
@@ -69,10 +72,13 @@ Nivell = 6 ;
   Serial.print ("F") ;
   break;
   
-  case7:
+  case 7:
   Serial.print ("G") ;
   break;
+
 }
+
+
  
 
       
@@ -104,7 +110,8 @@ Nivell = 6 ;
 
 //**************************** LOOP *************************************
 
-void loop() { //BUCLE
+void loop()            //BUCLE
+{               
 
 }
 //*************************** FUNCIONS **********************************
