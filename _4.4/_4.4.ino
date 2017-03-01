@@ -10,17 +10,18 @@
 
 //*************************** VARIABLES *********************************
 
-float KgCO2_m2 = 1.3 ;
+float KgCO2_m2 = 2.5 ;
 int Nivell ;
 
 //**************************** SETUP ************************************
 
 
-void setup() 
-{                    // CONDICIONS INICIALS
+void setup()         // CONDICIONS INICIALS
+{                    
 
+  Serial.begin(9600);     // Set up Serial library at 9600 bps
 
-  if (( 0 < KgCO2_m2 )&& (KgCO2_m2 < 3.5))
+  if (( 0.0 < KgCO2_m2 )&& (KgCO2_m2 < 3.5))
   {
 Nivell = 0 ;
   }
@@ -54,16 +55,15 @@ Nivell= 7 ;
   }
 
 ///////
-  Serial.begin(9600);     // Set up Serial library at 9600 bps
-
-  Serial.print ("El nivell de contaminacio es:");
+  
+  Serial.print ("El nivell de contaminacio es:") ;
   switch (Nivell)
 {  
   case 1:
-  {
+  
   Serial.println ("A") ;
   break ;
-  }
+  
   
   case 2:
   {
