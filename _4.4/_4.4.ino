@@ -10,7 +10,7 @@
 
 //*************************** VARIABLES *********************************
 
-float KgCO2_m2 = 2.5 ;
+float KgCO2_m2 = -10 ;
 int Nivell ;
 
 //**************************** SETUP ************************************
@@ -21,7 +21,7 @@ void setup()         // CONDICIONS INICIALS
 
   Serial.begin(9600);     // Set up Serial library at 9600 bps
 
-  if (( 0.0 < KgCO2_m2 )&& (KgCO2_m2 < 3.5))
+  if (( 0 < KgCO2_m2 )&& (KgCO2_m2 < 3.5))
   {
 Nivell = 0 ;
   }
@@ -59,49 +59,49 @@ Nivell= 7 ;
   Serial.print ("El nivell de contaminacio es:") ;
   switch (Nivell)
 {  
-  case 1:
+  case 0:
   
-  Serial.println ("A") ;
+  Serial.println (" A") ;
   break ;
   
   
+  case 1:
+  {
+  Serial.println (" B") ;
+  break;
+  }
+  
   case 2:
   {
-  Serial.println ("B") ;
+  Serial.println (" C") ;
   break;
   }
   
   case 3:
   {
-  Serial.println ("C") ;
-  break;
+  Serial.println (" D") ;
+  break; 
   }
   
   case 4:
-  {
-  Serial.println ("D") ;
+  Serial.println (" E") ;
   break;
-  }
   
   case 5:
-  Serial.println ("E") ;
+  {
+  Serial.println (" F") ;
   break;
+  }
   
   case 6:
   {
-  Serial.println ("F") ;
-  break;
-  }
-  
-  case 7:
-  {
-  Serial.println ("G") ;
+  Serial.println (" G") ;
   break;
   }
 
   default:    // Cas impossible (Valor negatiu KGCO2_M2)
   {
-  Serial.println ("Sensor Avariat");
+  Serial.println (" Sensor Avariat ");
   break;
   }
 }
